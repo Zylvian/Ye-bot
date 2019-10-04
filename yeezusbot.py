@@ -12,8 +12,10 @@ class RedditBot:
     def __init__(self):
         self.LOCK_FILE = 'lockfile.lock'
 
-        log.basicConfig(filename='bot_logging.log', level=log.INFO
-                        )
+        log.basicConfig(
+            format='%(asctime)s %(levelname)-8s %(message)s',
+            level=log.INFO,
+            datefmt='%Y-%m-%d %H:%M:%S')
 
         self.util = Util()
 
