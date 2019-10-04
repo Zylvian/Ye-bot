@@ -33,6 +33,7 @@ class RedditBot:
 
                 # Parse the comment
                 text = comment.body.encode(encoding="utf-8", errors="strict")
+                print(text)
                 # Checks if the keyword is in the comment.
                 keyword_mentioned_bool = self.util.is_keyword_mentioned(text)
 
@@ -44,7 +45,8 @@ class RedditBot:
                         comment.reply(response_string)
                     except praw.exceptions.APIException as e:
                         log.info(str(e))
-
+                else:
+                    print("didn't get the key")
 
             else:
                 return
@@ -64,7 +66,7 @@ class RedditBot:
         except PrawcoreException as e:
             log.info(e)
             log.info("Sleeping for 1 minute...")
-            time.sleep(60)  
+            time.sleep(60)
             self.run_cont()
         except KeyboardInterrupt:
             raise
