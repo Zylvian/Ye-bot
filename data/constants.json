@@ -1,0 +1,19 @@
+{
+  "alternative_names":{
+    "Franky": ["superrr", "superr","super"],
+    "Crocodile": ["luffymom", "luffysmom","luffysmom"],
+    "Sanji": "pervert",
+    "Usopp":"god",
+    "Brook":"yohoho",
+    "Buggy": ["futurekingofpirates", "futurepirateking", "piratekingofthefuture"]
+  },
+
+  "sub_to_wiki":{
+    "rickandmorty":"rickandmorty",
+    "onepiece":["onepiece","memepiece"],
+    "gameofthrones": ["gameofthrones","freefolk","gameofthronesmemes"],
+    "epicrapbattlesofhistory":"erb",
+    "wowwiki": ["wow","hearthstone","warcraft","warcraft3"],
+    "lotr": ["lotr","lotrmemes","TheHobbit","Hobbit_Memes","LOTR_on_Prime"]
+  }
+}
