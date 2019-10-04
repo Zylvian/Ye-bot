@@ -7,7 +7,7 @@ class Util:
     # Class is created for the files to load only once.
 
     def __init__(self, constantJSON='data/constants.json'):
-        with open(constantJSON, 'r', encoding='utf8') as file:
+        with open(constantJSON, 'r') as file:
             constants = json.load(file)
 
         self.keywords = constants["triggers"]
