@@ -18,7 +18,6 @@ class Util:
         """ Checks if the trigger words to call the bot are present in the string """
 
         for keyword in self.keywords:
-
             # Do a case insensitive search
             if re.search(keyword, text, re.IGNORECASE):
                 return True
