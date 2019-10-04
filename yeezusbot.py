@@ -32,7 +32,7 @@ class RedditBot:
             if os.path.isfile(self.LOCK_FILE):
 
                 # Parse the comment
-                text = comment.body
+                text = comment.body.encode(encoding="utf-8", errors="strict")
                 # Checks if the keyword is in the comment.
                 keyword_mentioned_bool = self.util.is_keyword_mentioned(text)
 
@@ -64,13 +64,17 @@ class RedditBot:
         except PrawcoreException as e:
             log.info(e)
             log.info("Sleeping for 1 minute...")
-            time.sleep(60)
+            time.sleep(60)  
             self.run_cont()
         except KeyboardInterrupt:
             raise
+        except UnicodeEncodeError:
+            log.info("The unicode errors are back.")
+            time.sleep(10)
+            self.run_cont()
         except:
             log.info("Something random happened, sleeping for 10 sec.")
-            time.sleep(60)
+            time.sleep(10)
             self.run_cont()
 
 if __name__ == '__main__':
