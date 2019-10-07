@@ -36,10 +36,10 @@ class RedditBot:
                 # Parse the comment
                 text = comment.body.encode(encoding="utf-8", errors="strict")
                 # Checks if the keyword is in the comment.d
-                keyword_mentioned_bool = self.util.is_keyword_mentioned(text)
+                shall_post_bool = self.util.is_keyword_mentioned(text) and comment.author.name is not "Yeezus-Bot"
 
                 # If a triggerword is in the string...
-                if keyword_mentioned_bool:
+                if shall_post_bool:
                     response_string = self.util.get_random_quote()
 
                     try:
