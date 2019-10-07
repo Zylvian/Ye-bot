@@ -1,9 +1,18 @@
 {
   "quotes":[
-  "IMMA LET YOU FINISH BUT BEYONCE HAD ONE OF THE GREATEST MUSIC VIDEOS OF ALL TIME"
+    "IMMA LET YOU FINISH BUT BEYONCE HAD ONE OF THE GREATEST MUSIC VIDEOS OF ALL TIME",
+    "NO ONE MAN SHOULD HAVE ALL THAT POWER",
+    "I LIKE SOME OF THE GAGA SONGS, WHAT THE FUCK DOES SHE KNOW ABOUT CAMERAS",
+    "GEORGE BUSH DOESN'T CARE ABOUT BLACK PEOPLE",
+    "My greatest pain in life is that I will never be able to see myself perform live",
+    "I MISS THE OLD KANYE",
+    "I had a cousin that stole my laptop that I was fuckin' bitches on, paid that nigga 250 thousand just to get it from him",
+    "I wanna fuck you hard on the sink after that, give you something to drink",
+    "I love sleep; it's my favorite",
+    "I am not a fan of books"
   ],
 
   "triggers": [
-    "yeezus"
+    "yeezus","kanye", "yeezy", "louis vuitton don", "mr. west"
   ]
 }

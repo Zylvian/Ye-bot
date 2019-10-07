@@ -27,4 +27,4 @@ class Util:
     def get_random_quote(self):
         """ Returns random quote from quotes file"""
 
-        return random.choice(self.quotes)
+        return random.choice(self.quotes).upper()
