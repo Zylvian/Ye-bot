@@ -24,7 +24,9 @@ class RedditBot:
         reddit = praw.Reddit('bot2')
 
         # Yeezus bot only needs one sub, FOOL!
-        subreddit_name = "Kanye"
+        #subreddit_name = "Kanye"
+        subreddit_name = "rickandmorty"
+
         subreddit = reddit.subreddit(subreddit_name)
 
         for comment in subreddit.stream.comments(skip_existing=True):
@@ -33,8 +35,7 @@ class RedditBot:
 
                 # Parse the comment
                 text = comment.body.encode(encoding="utf-8", errors="strict")
-                print(text)
-                # Checks if the keyword is in the comment.
+                # Checks if the keyword is in the comment.d
                 keyword_mentioned_bool = self.util.is_keyword_mentioned(text)
 
                 # If a triggerword is in the string...
@@ -45,8 +46,7 @@ class RedditBot:
                         comment.reply(response_string)
                     except praw.exceptions.APIException as e:
                         log.info(str(e))
-                else:
-                    print("didn't get the key")
+                        log.info("Ratelimit probably, we try another time")
 
             else:
                 return
