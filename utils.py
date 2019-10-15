@@ -12,6 +12,7 @@ class Util:
 
         self.keywords = constants["triggers"]
         self.quotes = constants["quotes"]
+        self.subreddits = constants["subreddits"]
 
 
     def is_keyword_mentioned(self, text):
@@ -28,3 +29,7 @@ class Util:
         """ Returns random quote from quotes file"""
 
         return random.choice(self.quotes).upper()
+
+    def get_subs(self):
+        "Returns a list of all the subs where the bot should be active."
+        return self.subreddits

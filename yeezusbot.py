@@ -23,9 +23,7 @@ class RedditBot:
     def _comment_responder(self):
         reddit = praw.Reddit('bot2')
 
-        # Yeezus bot only needs one sub, FOOL!
-        #subreddit_name = "Kanye"
-        subreddit_name = "rickandmorty"
+        subreddit_name = self.util.get_subs()
 
         subreddit = reddit.subreddit(subreddit_name)
 
