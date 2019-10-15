@@ -25,7 +25,7 @@ class RedditBot:
 
         subreddit_name = self.util.get_subs()
 
-        subreddit = reddit.subreddit(subreddit_name)
+        subreddit = reddit.subreddit("+".join(subreddit_name))
 
         for comment in subreddit.stream.comments(skip_existing=True):
 
